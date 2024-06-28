@@ -17,7 +17,6 @@ function addMessage(sender, message) {
         messageElement.classList.add('bot-message');
     }
 
-
     output.appendChild(messageElement);
     output.scrollTop = output.scrollHeight;
 }
@@ -38,11 +37,11 @@ async function respondToUser(userInput) {
     } else if (userInput.includes('bye')) {
         response = 'Au revoir! Passez une bonne journée.';
     } else if (userInput.includes('dépression') || userInput.includes('triste') || userInput.includes('perdu') || userInput.includes('perdue') || userInput.includes('ennuyeux') || userInput.includes('angoisse') || userInput.includes('angoissant')) {
-        response = 'Je suis désolé que vous vous sentiez ainsi. La dépression et l\'anxiété sont des maladies mentales sérieuses. Il est important de parler à un professionnel de la santé. En attendant, vous pouvez essayer quelques techniques de relaxation : \n\n- **Respiration profonde** : inspirez profondément pendant 4 secondes, retenez votre souffle pendant 7 secondes, puis expirez lentement pendant 8 secondes. Répétez cela cinq fois. \n- **Yoga** : essayez quelques postures simples de yoga comme la pose de l\'enfant ou la pose du cadavre pour vous détendre. \n- **Méditation** : trouvez un endroit calme, asseyez-vous confortablement et concentrez-vous sur votre respiration pendant quelques minutes.';
+        response = 'Je suis désolé que vous vous sentiez ainsi. Voici quelques exercices de relaxation qui peuvent vous aider : \n\n- **Respiration profonde** : Inspirez profondément pendant 4 secondes, retenez votre souffle pendant 7 secondes, puis expirez lentement pendant 8 secondes. Répétez cela cinq fois. \n- **Relaxation musculaire progressive** : Contractez et relâchez chaque groupe musculaire de votre corps, en commençant par les pieds et en remontant jusqu\'à la tête. \n- **Visualisation** : Fermez les yeux et imaginez un endroit calme et paisible. Essayez de visualiser chaque détail de cet endroit et de ressentir les sensations associées.';
     } else if (userInput.includes('cancer')) {
         response = 'Le cancer est une maladie où des cellules anormales se divisent de manière incontrôlée et détruisent les tissus corporels. Nous sommes là pour vous aider à traverser cette période difficile.';
     } else if (userInput.includes('relaxation')) {
-        response = 'Voici un exercice de respiration : inspirez profondément pendant 4 secondes, retenez votre souffle pendant 7 secondes, puis expirez lentement pendant 8 secondes. Répétez cela cinq fois.';
+        response = 'Voici quelques exercices de relaxation : \n\n- **Respiration abdominale** : Asseyez-vous ou allongez-vous confortablement. Placez une main sur votre abdomen et l\'autre sur votre poitrine. Inspirez lentement par le nez en gonflant l\'abdomen, puis expirez lentement par la bouche. Répétez cela pendant 5 minutes. \n- **Méditation guidée** : Écoutez une méditation guidée en ligne ou via une application de méditation. \n- **Étirements doux** : Faites des étirements doux pour détendre vos muscles, comme la pose de l\'enfant ou la pose du chat et de la vache en yoga.';
     } else if (userInput.includes('tribu')) {
         response = 'La tribu représente votre réseau de soutien social. Avez-vous parlé à vos amis ou à votre famille récemment ? Ils peuvent être une source de réconfort et de force.';
     } else if (userInput.includes('alliance thérapeutique')) {
@@ -54,11 +53,11 @@ async function respondToUser(userInput) {
     } else if (userInput.includes('sens')) {
         response = 'Trouver un sens à votre vie peut améliorer votre bien-être. Pensez à ce qui est important pour vous et comment vous pouvez y consacrer du temps et de l\'énergie.';
     } else if (userInput.includes('stress')) {
-        response = 'Le stress peut avoir un impact négatif sur votre santé mentale et physique. Essayez de pratiquer des techniques de relaxation comme la respiration profonde, le yoga ou la méditation.';
+        response = 'Le stress peut avoir un impact négatif sur votre santé mentale et physique. Voici quelques techniques pour vous aider à le gérer : \n\n- **Respiration en carré** : Inspirez pendant 4 secondes, retenez votre souffle pendant 4 secondes, expirez pendant 4 secondes, puis retenez votre souffle pendant 4 secondes. Répétez plusieurs fois. \n- **Balade en pleine nature** : Prenez un moment pour vous promener dans un parc ou une forêt, et essayez de vous concentrer sur les sons et les odeurs de la nature. \n- **Journal de gratitude** : Écrivez chaque jour trois choses pour lesquelles vous êtes reconnaissant. Cela peut aider à réduire le stress et à améliorer votre humeur.';
     } else if (userInput.includes('angoisse')) {
-        response = 'L\'angoisse est une réaction normale au stress, mais si elle devient trop intense ou fréquente, elle peut être un signe d\'un trouble anxieux. Nous pouvons essayer des techniques de relaxation ensemble. Respirer profondément, méditer, ou faire du yoga sont des moyens efficaces de gérer l\'angoisse.';
+        response = 'L\'angoisse est une réaction normale au stress, mais si elle devient trop intense ou fréquente, elle peut être un signe d\'un trouble anxieux. Voici quelques exercices de relaxation : \n\n- **Respiration alternée par les narines** : Asseyez-vous confortablement. Fermez la narine droite avec le pouce droit et inspirez par la narine gauche. Fermez la narine gauche avec l\'annulaire droit et expirez par la narine droite. Répétez plusieurs fois. \n- **Ancrage** : Concentrez-vous sur votre environnement immédiat. Notez mentalement cinq choses que vous pouvez voir, quatre choses que vous pouvez toucher, trois choses que vous pouvez entendre, deux choses que vous pouvez sentir et une chose que vous pouvez goûter.';
     } else if (userInput.includes('sommeil')) {
-        response = 'Le sommeil est essentiel pour votre santé et votre bien-être. Essayez de vous coucher et de vous réveiller à la même heure chaque jour, et évitez les écrans et la caféine avant de dormir.';
+        response = 'Le sommeil est essentiel pour votre santé et votre bien-être. Essayez ces conseils pour améliorer votre sommeil : \n\n- **Routine de coucher** : Allez vous coucher et réveillez-vous à la même heure chaque jour. \n- **Ambiance relaxante** : Créez une atmosphère relaxante dans votre chambre, avec une lumière tamisée et une température fraîche. \n- **Déconnexion** : Évitez les écrans (téléphone, ordinateur, télévision) au moins une heure avant de dormir.';
     } else if (userInput.includes('environnement')) {
         response = 'Votre environnement peut avoir un impact significatif sur votre bien-être. Assurez-vous que votre espace de vie est propre, organisé et apaisant.';
     } else if (userInput.includes('soins de support')) {
@@ -68,13 +67,21 @@ async function respondToUser(userInput) {
     } else if (userInput.includes('solitude')) {
         response = 'La solitude peut être très difficile à gérer. Essayez de rester en contact avec vos amis et votre famille. Même un simple message ou appel peut faire une grande différence.';
     } else if (userInput.includes('colère')) {
-        response = 'La colère est une émotion naturelle, mais il est important de la gérer de manière saine. Essayez des techniques de relaxation comme la respiration profonde ou l\'exercice physique pour vous calmer.';
+        response = 'La colère est une émotion naturelle, mais il est important de la gérer de manière saine. Essayez ces techniques : \n\n- **Respiration profonde** : Inspirez profondément par le nez, retenez votre souffle pendant quelques secondes, puis expirez lentement par la bouche. \n- **Exercice physique** : Faites une activité physique qui vous plaît, comme la marche rapide, le jogging ou le yoga. \n- **Écriture** : Notez ce qui vous met en colère et comment vous vous sentez. Parfois, mettre des mots sur nos émotions peut aider à les apaiser.';
     } else if (userInput.includes('motivation')) {
-        response = 'Il est normal de manquer de motivation parfois. Fixez-vous de petits objectifs réalisables et célébrez chaque succès, peu importe sa taille.';
+        response = 'Il est normal de manquer de motivation parfois. Voici quelques conseils pour la retrouver : \n\n- **Petits objectifs** : Fixez-vous de petits objectifs réalisables et célébrez chaque succès, peu importe sa taille. \n- **Routine** : Établissez une routine quotidienne pour structurer votre journée. \n- **Inspiration** : Lisez des citations inspirantes ou regardez des vidéos de personnes qui vous motivent.';
     } else if (userInput.includes('espoir')) {
         response = 'Garder espoir est essentiel, même dans les moments difficiles. Souvenez-vous que chaque jour est une nouvelle opportunité pour aller mieux.';
     } else if (userInput.includes('courage')) {
         response = 'Il faut beaucoup de courage pour affronter les défis de la vie. Vous êtes plus fort que vous ne le pensez et chaque petit pas compte.';
+    } else if (userInput.includes('addiction')) {
+        response = 'L\'addiction est une maladie complexe, mais il est possible de s\'en sortir. Parlez-en à un professionnel pour obtenir le soutien dont vous avez besoin. En attendant, essayez de vous entourer de personnes de confiance et d\'éviter les situations déclencheuses.';
+    } else if (userInput.includes('alcool') || userInput.includes('drogue') || userInput.includes('tabac')) {
+        response = 'La lutte contre l\'addiction à l\'alcool, aux drogues ou au tabac peut être très difficile. Voici quelques conseils : \n\n- **Remplacez les habitudes** : Trouvez des activités saines pour remplacer les habitudes de consommation. Par exemple, allez faire une promenade, lisez un livre ou faites du sport. \n- **Soutien** : Parlez à des amis ou à des membres de votre famille de confiance qui peuvent vous soutenir. \n- **Groupes de soutien** : Rejoignez un groupe de soutien en ligne ou en personne pour partager vos expériences et obtenir des conseils.';
+    } else if (userInput.includes('sexe') || userInput.includes('sexothérapie')) {
+        response = 'La sexothérapie peut aider à améliorer votre bien-être sexuel et relationnel. Voici quelques conseils pour améliorer votre vie sexuelle : \n\n- **Communication** : Parlez ouvertement avec votre partenaire de vos désirs et de vos préoccupations. \n- **Intimité émotionnelle** : Travaillez sur l\'intimité émotionnelle avec votre partenaire, par exemple en passant du temps de qualité ensemble. \n- **Éducation** : Renseignez-vous sur la santé sexuelle et explorez ce qui fonctionne pour vous et votre partenaire.';
+    } else if (userInput.includes('problèmes sexuels') || userInput.includes('dysfonctionnement érectile') || userInput.includes('libido')) {
+        response = 'Les problèmes sexuels peuvent être source de stress et d\'anxiété. Voici quelques conseils pour les gérer : \n\n- **Relaxation** : Essayez des techniques de relaxation comme la respiration profonde ou la méditation avant les rapports sexuels. \n- **Éducation** : Renseignez-vous sur les causes possibles de vos problèmes sexuels et explorez des solutions adaptées. \n- **Santé physique** : Assurez-vous de maintenir une bonne santé physique en faisant de l\'exercice régulièrement et en mangeant équilibré.';
     } else {
         response = 'Désolé, je ne comprends pas votre demande. Pouvez-vous reformuler?';
     }
