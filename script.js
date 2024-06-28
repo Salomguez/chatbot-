@@ -26,17 +26,31 @@ function scrollToBottom() {
     chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
+let userType = '';
+
+document.getElementById('patient-button').addEventListener('click', () => {
+    userType = 'patient';
+    document.getElementById('user-type-container').style.display = 'none';
+    addMessage('Bot', 'Merci de nous avoir informés que vous êtes un patient. Comment puis-je vous aider aujourd\'hui?');
+});
+
+document.getElementById('aidant-button').addEventListener('click', () => {
+    userType = 'aidant';
+    document.getElementById('user-type-container').style.display = 'none';
+    addMessage('Bot', 'Merci de nous avoir informés que vous êtes un aidant. Comment puis-je vous aider aujourd\'hui?');
+});
+
 async function respondToUser(userInput) {
     let response = '';
 
     if (userInput.includes('bonjour')) {
-        response = 'Bonjour! Comment puis-je vous aider aujourd\'hui?';
+        response = userType === 'patient' ? 'Bonjour! Comment puis-je vous aider aujourd\'hui, cher patient?' : 'Bonjour! Comment puis-je vous aider aujourd\'hui, cher aidant?';
     } else if (userInput.includes('bonsoir')) {
-        response = 'Bonsoir! Comment puis-je vous aider aujourd\'hui?';
-    } else if (userInput.includes('aide')|| userInput.includes('soutien') || userInput.includes('conseil') || userInput.includes('assistance') || userInput.includes('guidance') || userInput.includes('écoute') || userInput.includes('parler')){
+        response = userType === 'patient' ? 'Bonsoir! Comment puis-je vous aider ce soir, cher patient?' : 'Bonsoir! Comment puis-je vous aider ce soir, cher aidant?';
+    } else if (userInput.includes('aide')) {
         response = 'Je suis Sonia, un chatbot qui peut vous aider avec des questions sur la santé mentale et le soutien émotionnel. Comment puis-je vous aider aujourd\'hui?';
     } else if (userInput.includes('hello') || userInput.includes('salut')) {
-        response = 'Bonjour! Comment puis-je vous aider aujourd\'hui?';
+        response = userType === 'patient' ? 'Bonjour! Comment puis-je vous aider aujourd\'hui, cher patient?' : 'Bonjour! Comment puis-je vous aider aujourd\'hui, cher aidant?';
     } else if (userInput.includes('merci')) {
         response = 'De rien! N\'hésitez pas si vous avez d\'autres questions.';
     } else if (userInput.includes('bye')) {
