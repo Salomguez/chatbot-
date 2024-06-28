@@ -18,7 +18,12 @@ function addMessage(sender, message) {
     }
 
     output.appendChild(messageElement);
-    output.scrollTop = output.scrollHeight;
+    scrollToBottom();
+}
+
+function scrollToBottom() {
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
 async function respondToUser(userInput) {
@@ -75,7 +80,7 @@ async function respondToUser(userInput) {
     } else if (userInput.includes('courage')) {
         response = 'Il faut beaucoup de courage pour affronter les défis de la vie. Vous êtes plus fort que vous ne le pensez et chaque petit pas compte.';
     } else if (userInput.includes('addiction')) {
-        response = 'L\'addiction est une maladie complexe, mais il est possible de s\'en sortir. Parlez-en à un professionnel pour obtenir le soutien dont vous avez besoin. En attendant, essayez de vous entourer de personnes de confiance et d\'éviter les situations déclencheuses.';
+        response = 'L\'addiction est une maladie complexe, mais il est possible de s\'en sortir. Voici quelques conseils : \n\n- **Remplacez les habitudes** : Trouvez des activités saines pour remplacer les habitudes de consommation. Par exemple, allez faire une promenade, lisez un livre ou faites du sport. \n- **Soutien** : Parlez à des amis ou à des membres de votre famille de confiance qui peuvent vous soutenir. \n- **Groupes de soutien** : Rejoignez un groupe de soutien en ligne ou en personne pour partager vos expériences et obtenir des conseils.';
     } else if (userInput.includes('alcool') || userInput.includes('drogue') || userInput.includes('tabac')) {
         response = 'La lutte contre l\'addiction à l\'alcool, aux drogues ou au tabac peut être très difficile. Voici quelques conseils : \n\n- **Remplacez les habitudes** : Trouvez des activités saines pour remplacer les habitudes de consommation. Par exemple, allez faire une promenade, lisez un livre ou faites du sport. \n- **Soutien** : Parlez à des amis ou à des membres de votre famille de confiance qui peuvent vous soutenir. \n- **Groupes de soutien** : Rejoignez un groupe de soutien en ligne ou en personne pour partager vos expériences et obtenir des conseils.';
     } else if (userInput.includes('sexe') || userInput.includes('sexothérapie')) {
@@ -90,7 +95,7 @@ async function respondToUser(userInput) {
 }
 
 window.addEventListener('load', () => {
-    addMessage('Bot', 'Bienvenue sur La vie Kintsugi. Comment puis-je vous aider aujourd\'hui ?');
+    addMessage('Bot', 'Bienvenue sur Les Heures Kintsugi. Comment puis-je vous aider aujourd\'hui ?');
 });
 
 document.getElementById('user-input').addEventListener('keypress', async (e) => {
